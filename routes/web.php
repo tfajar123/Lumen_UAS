@@ -29,11 +29,16 @@ Route::group(['middleware' => ['auth']], function($router) {
     $router->post('/products', 'ProductController@store');
     $router->put('/product/{product_id}', 'ProductController@update');
     $router->delete('/product/{product_id}', 'ProductController@destroy');
-    $router->get('/orders', 'OrderController@index');
     $router->post('/orders', 'OrderController@store');
     $router->put('/order/{order_id}', 'OrderController@update');
     $router->delete('order/{order_id}', 'OrderController@destroy');
 });
 
-
+$router->get('/orders', 'OrderController@index');
 $router->get('/order/{order_id}', 'OrderController@show');
+
+$router->get('/suppliers', 'SupplierController@index');
+$router->post('/suppliers', 'SupplierController@store');
+$router->get('/supplier/{supplier_id}', 'SupplierController@show');
+$router->put('/supplier/{supplier_id}', 'SupplierController@update');
+$router->delete('/supplier/{supplier_id}', 'SupplierController@destroy');
