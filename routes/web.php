@@ -42,3 +42,10 @@ $router->post('/suppliers', 'SupplierController@store');
 $router->get('/supplier/{supplier_id}', 'SupplierController@show');
 $router->put('/supplier/{supplier_id}', 'SupplierController@update');
 $router->delete('/supplier/{supplier_id}', 'SupplierController@destroy');
+
+// Transaction routes
+$router->get('/transactions', 'TransactionController@index');
+$router->get('/transactions/{id}', 'TransactionController@show');
+$router->post('/transactions', 'TransactionController@store');
+$router->put('/transactions/{id}', 'TransactionController@update');
+$router->delete('/transactions/{id}', 'TransactionController@destroy');

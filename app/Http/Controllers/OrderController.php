@@ -37,7 +37,6 @@ class OrderController extends Controller
     {
             $input = $request->all();
             $order = Order::find($order_id);
-               
             if(!$order) {
                 abort(404);
             }
